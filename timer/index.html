@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Таймер обратного отсчета</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Введите данные</h1>
+      <div class="input-group">
+        <input type="text" id="year" placeholder="Год" required />
+        <div id="year-error" class="error-message">
+          Год может быть от 2000 до 2100
+        </div>
+        <input type="text" id="month" placeholder="Месяц" required />
+        <div id="month-error" class="error-message">
+          Введите месяц кириллицей, например "январь"
+        </div>
+        <input type="text" id="date" placeholder="Число" required />
+        <div id="date-error" class="error-message">
+          Введите двухзначную дату в числовом формате
+        </div>
+        <input
+          type="text"
+          id="time"
+          placeholder="Время в формате ЧЧ:ММ"
+          required
+        />
+        <div id="time-error" class="error-message">
+          Введите время в формате ЧЧ:ММ
+        </div>
+        <button id="startBtn">Запустить таймер</button>
+      </div>
+    </div>
+
+    <h2>До конца таймера осталось:</h2>
+    <div class="timer">
+      <div class="card">
+        <div class="label">Дней</div>
+        <div id="days">00</div>
+      </div>
+      <div class="card">
+        <div class="label">Часов</div>
+        <div id="hours">00</div>
+      </div>
+      <div class="card">
+        <div class="label">Минут</div>
+        <div id="minutes">00</div>
+      </div>
+      <div class="card">
+        <div class="label">Секунд</div>
+        <div id="seconds">00</div>
+      </div>
+    </div>
+    <div>
+      <p id="no-time-left">Время истекло</p>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
