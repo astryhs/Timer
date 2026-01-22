@@ -9,30 +9,44 @@
   <body>
     <div class="container">
       <h1>Введите данные</h1>
-      <div class="input-group">
-        <input type="text" id="year" placeholder="Год" required />
-        <div id="year-error" class="error-message">
-          Год может быть от 2000 до 2100
-        </div>
-        <input type="text" id="month" placeholder="Месяц" required />
-        <div id="month-error" class="error-message">
-          Введите месяц кириллицей, например "январь"
-        </div>
-        <input type="text" id="date" placeholder="Число" required />
-        <div id="date-error" class="error-message">
-          Введите двухзначную дату в числовом формате
-        </div>
+      <form class="input-group">
+        <input
+          type="text"
+          id="year"
+          pattern="^(19|20)\d{2}$"
+          title="Год должен быть указан в числах формат XXXX"
+          placeholder="Год"
+          required
+        />
+        <input
+          type="text"
+          id="month"
+          pattern="^[а-яА-Я]{1,10}$"
+          title='Введите месяц кириллицей, например "январь"'
+          placeholder="Месяц"
+          required
+        />
+
+        <input
+          type="text"
+          id="date"
+          pattern="^(0[1-9]|[12]\d|3[01])$"
+          title="Введите двухзначную дату в числовом формате XX"
+          placeholder="Число"
+          required
+        />
+
         <input
           type="text"
           id="time"
+          pattern="^([01]\d|2[0-3]):([0-5]\d)$"
+          title="Введите время в формате ЧЧ:ММ"
           placeholder="Время в формате ЧЧ:ММ"
           required
         />
-        <div id="time-error" class="error-message">
-          Введите время в формате ЧЧ:ММ
-        </div>
+
         <button id="startBtn">Запустить таймер</button>
-      </div>
+      </form>
     </div>
 
     <h2>До конца таймера осталось:</h2>

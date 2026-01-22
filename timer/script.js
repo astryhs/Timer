@@ -89,14 +89,9 @@ const startTimer = () => {
     monthInput.value = "";
     dateInput.value = "";
     timeInput.value = "";
-  } else {
-    alert("Пожалуйста, заполните все поля");
   }
 };
 
 startBtn.addEventListener("click", () => {
   startTimer();
 });
-
-// Проблемы:
-// 1. сделать валидацию года,месяца,дня,времени через регулярные выражения
